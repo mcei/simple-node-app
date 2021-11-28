@@ -2,9 +2,11 @@ FROM i386/node:10-alpine
 
 WORKDIR /usr/app
 
-COPY ./ ./
+COPY ./package.json ./
 
 RUN npm install
+
+COPY ./ ./
 
 CMD ["npm", "start"]
 
